@@ -33,11 +33,11 @@ import java.util.Properties;
  */
 public class APIMDatasourcesInstructionReader implements InstructionReader {
 
-    private static final String APIM_DATASOURCES_EXTENTION = "apim-datasources";
+    private static final String APIM_DATASOURCES_EXTENSION = "apim-datasources";
 
     @Override
     public String getType() {
-        return APIM_DATASOURCES_EXTENTION;
+        return APIM_DATASOURCES_EXTENSION;
     }
 
     @Override

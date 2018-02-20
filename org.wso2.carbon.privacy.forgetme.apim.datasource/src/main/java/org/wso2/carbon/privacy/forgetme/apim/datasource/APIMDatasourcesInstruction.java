@@ -18,8 +18,6 @@
 
 package org.wso2.carbon.privacy.forgetme.apim.datasource;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.wso2.carbon.privacy.forgetme.api.report.ReportAppender;
 import org.wso2.carbon.privacy.forgetme.api.runtime.Environment;
 import org.wso2.carbon.privacy.forgetme.api.runtime.ForgetMeInstruction;
@@ -46,8 +44,6 @@ import java.util.Map;
  * The data-source is passed as a processor config or environment.
  */
 public class APIMDatasourcesInstruction implements ForgetMeInstruction {
-
-    private static final Logger log = LoggerFactory.getLogger(APIMDatasourcesInstruction.class);
 
     @Override
     public ForgetMeResult execute(UserIdentifier userIdentifier, ProcessorConfig processorConfig,
