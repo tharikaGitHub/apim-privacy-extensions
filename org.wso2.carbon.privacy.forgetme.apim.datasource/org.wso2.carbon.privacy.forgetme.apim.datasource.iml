@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: org.wso2.carbon.datasources:org.wso2.carbon.datasource.core:1.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.wso2.eclipse.osgi:org.eclipse.osgi.services:3.4.0.v20140312-2051" level="project" />
+    <orderEntry type="library" name="Maven: org.wso2.carbon:org.wso2.carbon.core:5.1.0-alpha2" level="project" />
+    <orderEntry type="library" name="Maven: commons-io.wso2:commons-io:2.4.0.wso2v1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat.wso2:jdbc-pool:7.0.34.wso2v2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-jdbc:7.0.47" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-juli:7.0.47" level="project" />
+    <orderEntry type="library" name="Maven: org.wso2.eclipse.osgi:org.eclipse.osgi:3.10.2.v20150203-1939" level="project" />
+    <orderEntry type="library" name="Maven: com.zaxxer:HikariCP:2.4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.wso2.carbon.jndi:org.wso2.carbon.jndi:1.0.0-alpha" level="project" />
+    <orderEntry type="library" name="Maven: org.wso2.carbon.privacy:org.wso2.carbon.privacy.forgetme.api:1.0.3-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: com.googlecode.json-simple:json-simple:1.1" level="project" />
+    <orderEntry type="library" name="Maven: commons-cli:commons-cli:1.3.1" level="project" />
+    <orderEntry type="library" name="Maven: org.wso2.carbon.privacy:org.wso2.carbon.privacy.forgetme.sql:1.0.3-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.25" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-log4j12:1.7.25" level="project" />
+    <orderEntry type="library" name="Maven: log4j:log4j:1.2.17" level="project" />
+    <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.6" level="project" />
+  </component>
+</module>

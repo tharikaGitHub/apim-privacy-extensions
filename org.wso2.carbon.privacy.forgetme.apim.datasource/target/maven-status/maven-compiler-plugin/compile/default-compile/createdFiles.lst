@@ -1,0 +1,6 @@
+org/wso2/carbon/privacy/forgetme/apim/datasource/APIMDatasourcesInstruction.class
+org/wso2/carbon/privacy/forgetme/apim/datasource/ExecutionModules/IDNOauthConsumerAppsSQLExecutionModule.class
+org/wso2/carbon/privacy/forgetme/apim/datasource/APIMDatasourcesInstructionReader.class
+org/wso2/carbon/privacy/forgetme/apim/datasource/APIMDatasourceConstants.class
+org/wso2/carbon/privacy/forgetme/apim/datasource/ExecutionModules/AMApplicationRegistrationSQLExecutionModule.class
+org/wso2/carbon/privacy/forgetme/apim/datasource/ExecutionModules/SPAppSQLExecutionModule.class
