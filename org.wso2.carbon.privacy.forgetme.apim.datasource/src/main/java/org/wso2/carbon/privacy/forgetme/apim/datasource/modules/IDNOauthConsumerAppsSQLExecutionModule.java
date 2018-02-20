@@ -32,6 +32,9 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * SQL execution module to execute the query related to IDN_OAUTH_CONSUMER_APPS table
+ */
 public class IDNOauthConsumerAppsSQLExecutionModule implements Module<UserSQLQuery> {
 
     private static final Logger log = LoggerFactory.getLogger(IDNOauthConsumerAppsSQLExecutionModule.class);
@@ -95,6 +98,9 @@ public class IDNOauthConsumerAppsSQLExecutionModule implements Module<UserSQLQue
                         .setString(USER_STORE_DOMAIN, userSQLQuery.getUserIdentifier().getUserStoreDomain());
                 namedPreparedStatement2.setInt(TENANT_ID, userSQLQuery.getUserIdentifier().getTenantId());
                 namedPreparedStatement2.getPreparedStatement().executeUpdate();
+                if (log.isDebugEnabled()) {
+                    log.debug("Executed the sql query: {}.", userSQLQuery.getSqlQuery().toString());
+                }
             }
         } catch (SQLException e) {
             throw new SQLModuleException(e);

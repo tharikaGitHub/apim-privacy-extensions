@@ -41,9 +41,13 @@ import org.wso2.carbon.privacy.forgetme.sql.sql.UserSQLQuery;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Forget-Me instruction which processes a table in RDBMS.
+ * The data-source is passed as a processor config or environment.
+ */
 public class APIMDatasourcesInstruction implements ForgetMeInstruction {
 
-    private static final Logger logger = LoggerFactory.getLogger(APIMDatasourcesInstruction.class);
+    private static final Logger log = LoggerFactory.getLogger(APIMDatasourcesInstruction.class);
 
     @Override
     public ForgetMeResult execute(UserIdentifier userIdentifier, ProcessorConfig processorConfig,
@@ -51,12 +55,15 @@ public class APIMDatasourcesInstruction implements ForgetMeInstruction {
 
         String datasourceName = APIMDatasourceConstants.WSO2AM_DB;
 
+        //Map of SQL Queries for data retrieval for each table of concern stored against the table name
         Map<String, SQLQuery> queryList = new HashMap<>();
         queryList.put(APIMDatasourceConstants.AM_APPLICATION_REGISTRATION_TABLE,
                 new SQLQuery(APIMDatasourceConstants.AM_APPLICATION_REGISTRATION_QUERY));
         queryList.put(APIMDatasourceConstants.IDN_OAUTH_CONSUMER_APPS_TABLE,
                 new SQLQuery(APIMDatasourceConstants.IDN_OAUTH_CONSUMER_APPS_QUERY));
         queryList.put(APIMDatasourceConstants.SP_APP_TABLE, new SQLQuery(APIMDatasourceConstants.SP_APP_QUERY));
+
+        reportAppender.appendSection("Processing queries in APIM datasource Extensions");
 
         try {
             for (Map.Entry<String, SQLQuery> query : queryList.entrySet()) {
@@ -83,10 +90,12 @@ public class APIMDatasourcesInstruction implements ForgetMeInstruction {
                 }
 
                 sqlExecutionModule.execute(userSQLQuery);
+                reportAppender.append("Executed query %s", userSQLQuery);
             }
         } catch (ModuleException e) {
             throw new InstructionExecutionException("Error occurred while executing sql query", e);
         }
+        reportAppender.appendSection("Completed all sql queries under APIM Datasources Extensions");
         return new ForgetMeResult();
     }
 }

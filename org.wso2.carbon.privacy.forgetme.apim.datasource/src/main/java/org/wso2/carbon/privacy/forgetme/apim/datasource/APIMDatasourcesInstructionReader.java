@@ -18,8 +18,6 @@
 
 package org.wso2.carbon.privacy.forgetme.apim.datasource;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.wso2.carbon.privacy.forgetme.api.runtime.Environment;
 import org.wso2.carbon.privacy.forgetme.api.runtime.ForgetMeInstruction;
 import org.wso2.carbon.privacy.forgetme.api.runtime.InstructionReader;
@@ -31,11 +29,9 @@ import java.util.List;
 import java.util.Properties;
 
 /**
- * Implements Instruction generation for apim special datasources processing.
+ * Implements Instruction generation for apim specific datasources processing.
  */
 public class APIMDatasourcesInstructionReader implements InstructionReader {
-
-    private static final Logger logger = LoggerFactory.getLogger(APIMDatasourcesInstructionReader.class);
 
     private static final String APIM_DATASOURCES_EXTENTION = "apim-datasources";
 

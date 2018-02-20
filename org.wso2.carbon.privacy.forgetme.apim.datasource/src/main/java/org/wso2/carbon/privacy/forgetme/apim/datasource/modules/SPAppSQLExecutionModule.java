@@ -32,6 +32,9 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * SQL execution module to execute the query related to SP_APPS table
+ */
 public class SPAppSQLExecutionModule implements Module<UserSQLQuery> {
 
     private static final Logger log = LoggerFactory.getLogger(SPAppSQLExecutionModule.class);
@@ -102,6 +105,9 @@ public class SPAppSQLExecutionModule implements Module<UserSQLQuery> {
                         .setString(USER_STORE_DOMAIN, userSQLQuery.getUserIdentifier().getUserStoreDomain());
                 namedPreparedStatement2.setInt(TENANT_ID, userSQLQuery.getUserIdentifier().getTenantId());
                 namedPreparedStatement2.getPreparedStatement().executeUpdate();
+                if (log.isDebugEnabled()) {
+                    log.debug("Executed the sql query: {}.", userSQLQuery.getSqlQuery().toString());
+                }
             }
         } catch (SQLException e) {
             throw new SQLModuleException(e);

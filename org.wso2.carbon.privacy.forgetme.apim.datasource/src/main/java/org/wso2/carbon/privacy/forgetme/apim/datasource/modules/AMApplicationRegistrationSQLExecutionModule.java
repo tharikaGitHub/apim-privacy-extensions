@@ -33,6 +33,9 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * SQL execution module to execute the query related to AM_APPLICATION_REGISTRATION table
+ */
 public class AMApplicationRegistrationSQLExecutionModule implements Module<UserSQLQuery> {
 
     private static final Logger log = LoggerFactory.getLogger(AMApplicationRegistrationSQLExecutionModule.class);
@@ -96,6 +99,9 @@ public class AMApplicationRegistrationSQLExecutionModule implements Module<UserS
                 namedPreparedStatement2.setString(MODIFIED_STRING, modifiedInputString);
                 namedPreparedStatement2.setInt(SUBSCRIBER_ID, subscriberId);
                 namedPreparedStatement2.getPreparedStatement().executeUpdate();
+                if (log.isDebugEnabled()) {
+                    log.debug("Executed the sql query: {}.", userSQLQuery.getSqlQuery().toString());
+                }
             }
         } catch (SQLException e) {
             throw new SQLModuleException(e);
